@@ -1,7 +1,12 @@
 [package]
 name = "floating-ui"
 version = "0.0.1"
+authors = ["Henry Bersey"]
 edition = "2021"
+description = "Rust bindings for Floating UI "
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/hbersey/floating-ui-rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
