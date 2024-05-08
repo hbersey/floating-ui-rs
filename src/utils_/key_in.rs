@@ -3,7 +3,7 @@ macro_rules! key_in {
         assert_impl_all!($type: Into<wasm_bindgen::JsValue>);
 
         paste::paste! {
-            #[derive(Clone)]
+            #[derive(Clone, utility_macros::Partial)]
             pub struct $name {
                 $(pub [<$member:snake>]: $type),*
             }
@@ -43,10 +43,6 @@ macro_rules! key_in {
             }
 
             crate::utils_::index!($name, $in {$($member),*} => $type);
-
-            pub struct [< Partial $name> ] {
-                $(pub [<$member:snake>]: Option<$type>),*
-            }
 
             crate::utils_::index!([< Partial $name> ], $in {$($member),*} => Option<$type>);
 

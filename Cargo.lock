@@ -16,12 +16,13 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "floating-ui"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "js-sys",
  "paste",
  "static_assertions",
  "thiserror",
+ "utility-macros",
  "wasm-bindgen",
  "web-sys",
 ]
@@ -113,6 +114,40 @@ name = "unicode-ident"
 version = "1.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
+
+[[package]]
+name = "utility-macros"
+version = "0.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0383d45985f7e0d7f8bd1f7144826793e555803a52ad8e18081e7f501e1da583"
+dependencies = [
+ "utility-macros-derive",
+ "utility-macros-internals",
+]
+
+[[package]]
+name = "utility-macros-derive"
+version = "0.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c890991cda902a98175694a5807c9fe8c5a9af59897241791b746c584156aacf"
+dependencies = [
+ "quote",
+ "syn",
+ "utility-macros-internals",
+]
+
+[[package]]
+name = "utility-macros-internals"
+version = "0.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d26763c2311c36f603319737f630d42eaffcff6ec81705e1eb8e323efcd7f2a6"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "static_assertions",
+ "syn",
+ "thiserror",
+]
 
 [[package]]
 name = "wasm-bindgen"
